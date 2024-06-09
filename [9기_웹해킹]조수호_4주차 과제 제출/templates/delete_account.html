@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원탈퇴</title>
+</head>
+<body>
+    <h1>회원탈퇴</h1>
+    <p>마지막 경고!!! 진짜 탈퇴하실겁니까?</p>
+    <form action="{{ url_for('delete_account') }}" method="post">
+        <button type="submit">탈퇴</button>
+    </form>
+    <a href="{{ url_for('index') }}">취소</a>
+</body>
+</html>

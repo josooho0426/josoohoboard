@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>새 게시글</title>
+</head>
+<body>
+    <h1>새 게시글 작성</h1>
+    <form method="post">
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="content">내용:</label>
+        <textarea id="content" name="content" required></textarea>
+        <br>
+        <button type="submit">완료</button>
+    </form>
+    <a href="{{ url_for('index') }}">게시판 목록으로 돌아가기</a>
+</body>
+</html>

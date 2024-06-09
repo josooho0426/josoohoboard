@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글 수정</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>수정하기</h1>
+        </div>
+    </header>
+    <div class="container">
+        <form action="{{ url_for('edit', id=post.id) }}" method="post">
+            <label for="title">제목</label>
+            <input type="text" id="title" name="title" value="{{ post.title }}" required>
+            <br>
+            <label for="content">내용</label>
+            <textarea id="content" name="content" required>{{ post.content }}</textarea>
+            <br>
+            <label for="author">작성자</label>
+            <input type="text" id="author" name="author" value="{{ post.author }}" required>
+            <br>
+            <button type="submit">제출</button>
+        </form>
+        <br>
+        <a href="{{ url_for('index') }}">게시판으로 돌아가기</a>
+    </div>
+</body>
+</html>

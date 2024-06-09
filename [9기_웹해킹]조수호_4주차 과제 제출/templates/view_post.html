@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>{{ post.title }}</h1>
+        </div>
+    </header>
+    <div class="container">
+        <p>작성자: {{ post.author }}</p>
+        <p>{{ post.content }}</p>
+        <br>
+        <a href="{{ url_for('index') }}">게시판으로 돌아가기</a>
+    </div>
+</body>
+</html>
